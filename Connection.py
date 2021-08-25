@@ -34,7 +34,7 @@ def convertDataToJSON(semester, description):
         "pinataContent": {
             "name": "reward Report",
             "description": description,
-            "image": "ipfs://bafybeihsecbomd7gbu6qjnvs7jinlxeufujqzuz3ccazmhvkszsjpzzrsu",
+            "image": "ipfs/QmWLMgbNMdeF1BMW4KbDFSbzFHAJYzBcWRxfvC5fwPYpgv",
             "semester": semester,
         },
     }

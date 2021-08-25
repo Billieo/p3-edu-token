@@ -13,10 +13,7 @@ contract EduToken is ERC20, ERC20Detailed, ERC20Mintable {
         ERC20Detailed (name, symbol, 18) public
         
         {
-            
-           
-            
+            mint(msg.sender, initialsupply);
         }
-    
-    
-}
+   
+}   
