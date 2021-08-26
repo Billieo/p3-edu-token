@@ -42,7 +42,7 @@ def get_token_request(token_id):
 # python accident.py        get            1
 
 # def main() is the crux of the User Experience (UX). It defines how we treat all 
-# stakeholders of the EDU Token, via code.
+# stakeholders of the EDU Token application, via code.
 def main():
     if sys.argv[1] == "report":
         token_id, report_uri = create_token_request()
