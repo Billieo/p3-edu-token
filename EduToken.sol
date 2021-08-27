@@ -5,7 +5,7 @@ import "github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contr
 contract EduToken{
     address payable owner = msg.sender;
     string public symbol = "EDUTOKEN";
-    uint public exchangeRate = 1;
+    uint public exchangeRate = 100;
     uint public reward_rate = 1;
     
     mapping(address => uint) balances;
@@ -24,7 +24,7 @@ contract EduToken{
        
     
     function purchase() public payable {
-        // 
+        // The purchase function allow the owner to purchase more token
         uint amountEduToken = msg.value * exchangeRate;
         balances[msg.sender] += amountEduToken;
         owner.transfer(msg.value);
