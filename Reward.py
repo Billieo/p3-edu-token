@@ -5,6 +5,7 @@ from Connection import convertDataToJSON, pinJSONtoIPFS, initContract, w3
 
 from pprint import pprint
 
+#initialized the contract 
 EduToken = initContract()
 
 def createRewardReport():
@@ -21,6 +22,7 @@ def createRewardReport():
 
 
 def balance(address):
+    # Allow to check the balance of the recipent address
     tx_hash = EduToken.functions.balance().transact(
         {"from": address}
     )
@@ -28,6 +30,7 @@ def balance(address):
     return receipt
 
 def transfer (value, recipient):
+    # Allow to transfer between address
     tx_hash = EduToken.functions.transfer(value, recipient).transact(
         {"from": w3.eth.accounts[0]}
     )
@@ -37,6 +40,7 @@ def transfer (value, recipient):
 
 
 def main():
+    # Def main is the crux of the User Experience (UX). It defines how we treat all stakeholders of the EDU Token, via code. 
     if sys.argv[1] == "rewardstudent":
         token_id, report_uri = createRewardReport()
 
